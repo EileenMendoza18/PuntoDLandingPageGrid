@@ -6,12 +6,19 @@
 }
 
 body {
-    background-color:#FAF3E0;
-    color: #000000;
-    height: 100vh;
-    display: grid; 
+    background-color: #FAF3E0;
+  color: #000000;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+main{
+    display: grid;
     justify-items: center;
-    padding-top: 8rem;
+    width:100%;
+    gap:20px;
 }
 
 .header{
@@ -81,12 +88,12 @@ body {
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
     /* grid-template-columns: 1fr;  */
-    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
-    height: 70vh;
     overflow: hidden;
-    height: 80vh;
+    height: 90%;
+    min-height: 80vh;
     border-radius: 20px;
 
 }
@@ -100,18 +107,19 @@ body {
     grid-column: 1;
     grid-row: 1;
     height: 100%;
+    border-radius: 20px;
 }
 .hero_button, .hero_subtitulo,.hero_titulo   {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1/2;
+    grid-row: 1/2;
     z-index: 2;
     text-align: center;
-    align-self: center;
     padding: 10px;
 
 }
 .hero_titulo{
-    padding-top: 10px;
+    align-self: start;
+    padding-top: 130px;
     color: #4b302d;
     font-weight: 1000;
     font-size: 2rem;
@@ -119,13 +127,13 @@ body {
 }
 
 .hero_subtitulo{
-    margin-top: 80px;
+    align-self: center;
     color: #4b302d;
     font-size: 1rem;
 }
 .hero_button{
-    
-    margin-top: 180px; 
+    align-self: end;
+    margin-bottom: 150px;
     justify-self: center;
     padding: 5px 10px;
     background-color: #ff8787; 
@@ -133,4 +141,89 @@ body {
     cursor: pointer;
     color: #ffffff; /* Color del texto del botón */
     border-radius: 5px;
+}
+.tarjetas {
+  display: grid;
+
+  /* Grid explícita: define el ancho base de las columnas */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+
+  /* Grid implícita: define filas automáticas */
+  grid-auto-rows: 250px;
+
+  /*Activa el flujo denso (rellena huecos) */
+  grid-auto-flow: dense;
+
+  gap: 20px;
+  width: 90%;
+  /* margin: 2rem auto; */
+  justify-content: center;
+}
+
+.tarjeta {
+  background-color: #FAF3E0;
+  display: grid;
+  grid-template-rows: 40px 120px 70px;
+  justify-items: center;
+  border: 1px solid rgb(89, 50, 50);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  height: auto;
+  
+}
+
+h3{
+    font-size: 25px;
+}
+
+.tarjeta img {
+  width: 70%;
+  height: 100%;
+}
+
+.tarjeta p {
+  color: #693f3b;
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+/* Tarjetas que ocupan más espacio para mostrar el flujo denso */
+.tarjeta:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.tarjeta:nth-child(6) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.tarjeta:nth-child(2) img,
+.tarjeta:nth-child(3) img,
+.tarjeta:nth-child(4) img,
+.tarjeta:nth-child(5) img {
+    max-height: 200px;
+}
+
+
+.tarjeta:nth-child(1) p, .tarjeta:nth-child(6) p
+{
+    font-size: 20px;
+    
+}
+.tarjeta:nth-child(1), .tarjeta:nth-child(1) h3,
+.tarjeta:nth-child(6), .tarjeta:nth-child(6) h3{
+    grid-template-rows: 60px 320px 130px;
+    font-size: 40px;
+    
+}
+
+.tarjeta:nth-child(1) img,
+.tarjeta:nth-child(6) img {
+  align-self: center; /* centra verticalmente en su celda */
+  justify-self: center; /* centra horizontalmente */
+  object-fit: contain;
+  height: 50vh;
+  width: 100%;
 }
