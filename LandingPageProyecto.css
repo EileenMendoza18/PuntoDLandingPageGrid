@@ -308,3 +308,52 @@ h3{
   text-align: center;
   width: 100%;
 }
+
+.footer {
+  height: 100%;
+  background-color: #F4BFBF ;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer__redes{
+  display: grid;
+  grid-template-columns: repeat(5,0.3fr);
+  gap: 2px;
+  padding: 5px;
+}
+.footer__redes img{
+  width:80%;
+  height: 90%;
+}
+
+.footer__derechos{
+  font-size: 0.5rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer__contacto{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  justify-items: center;
+  padding: 20px;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.footer__contacto h3{
+  font-size: 0.7rem;
+}
+
+.footer__contacto p{
+  font-size: 0.5rem;
+}
+
