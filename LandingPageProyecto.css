@@ -162,7 +162,7 @@ body {
   color: var(--color-text-secondary);        /* Color marrón rojizo */
   text-decoration: none;                     /* Quita el subrayado */
   font-weight: 500;                          /* Peso medio de fuente */
-  font-size: 0.7rem;            /* Tamaño de fuente pequeño */
+  font-size: 0.9rem;            /* Tamaño de fuente pequeño */
   transition: color 0.3s ease; /* Transición suave de color */
 }
 
@@ -243,23 +243,24 @@ body {
 .products  {
     display: grid;                                        /* Layout grid */
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px)); /* Columnas responsivas */
-    grid-auto-rows: 250px;                                /* Filas automáticas de 250px */
+    grid-auto-rows: 350px;                                /* Filas automáticas de 250px */
     grid-auto-flow: dense;                                /* Flujo denso rellena huecos */
     gap: 20px;                               /* Espacio entre tarjetas */
-    width:  90%;                          /* 90% del ancho */
+    width:  90%;  
+    height: auto;                        
     justify-content: center;                              /* Centra las tarjetas */
 }
 
 .products__card  {
     background-color: var(--color-secondary);   /* Fondo beige */
     display: grid;                              /* Layout grid interno */
-    grid-template-rows: 40px 120px 70px;        /* Tres filas: título, imagen, descripción */
+    grid-template-rows: 1fr 1fr 1fr;        /* Tres filas: título, imagen, descripción */
     justify-items: center;                      /* Centra horizontalmente */
     border: 1px solid var(--color-border);      /* Borde marrón */
     border-radius: 20px;     /* Bordes redondeados */
     padding: 10px;                 /* Padding interno */
     text-align: center;                         /* Texto centrado */
-    height: auto;                               /* Altura automática */
+    height: 100%;                               /* Altura automática */
 }
 
 .products__card:hover {
@@ -296,7 +297,7 @@ body {
 .products__card:nth-child(3) .products__card-image,
 .products__card:nth-child(4) .products__card-image,
 .products__card:nth-child(5) .products__card-image {
-    max-height: 200px;                /* Altura máxima */
+    max-height: 500px;                /* Altura máxima */
 }
 
 .products__card--featured:nth-child(1) .products__card-description, 
@@ -308,7 +309,6 @@ body {
 .products__card--featured:nth-child(1) .products__card-title,
 .products__card--featured:nth-child(6), 
 .products__card--featured:nth-child(6) .products__card-title{
-    grid-template-rows: 60px 320px 130px; /* Filas más grandes */
     font-size: 40px;      /* Tamaño de fuente 40px */
 }
 
@@ -338,7 +338,7 @@ body {
                          "p";                   /* Área para párrafo */
     background-color: var(--color-background);  /* Fondo rosa transparente */
     width: 100%;                                /* Ancho completo */
-    height: 70vh;           /* Altura de 70vh */
+    height: 50vh;           /* Altura de 70vh */
     justify-items: center;                      /* Centra horizontalmente */
     align-items: center;                        /* Centra verticalmente */
     border-radius: 20px;     /* Bordes redondeados */
@@ -348,7 +348,7 @@ body {
 
 .testimonials__item-avatar {
     width: 70%;                               /* 70% del ancho */
-    height: 30vh;                             /* Altura de 30% del viewport */
+    height: 20vh;                             /* Altura de 30% del viewport */
     background-color: var(--color-card-bg);   /* Fondo rosa claro */
     border: 2px solid var(--color-border-dark); /* Borde marrón oscuro */
     border-radius:50%; /* Bordes circulares */
@@ -361,8 +361,8 @@ body {
 
 .contact-form {
     display: grid;                                        /* Layout grid */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 350px)); /* Columnas responsivas */
-    grid-template-rows: repeat(4, 70px) 250px 50px;      /* 4 filas de 70px, 1 de 250px, 1 de 50px */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 450px)); /* Columnas responsivas */
+    grid-template-rows: repeat(4, 70px) 320px 80px;      /* 4 filas de 70px, 1 de 250px, 1 de 50px */
     background-color: var(--color-accent-light);         /* Fondo rosa transparente */
     padding:  15px;                          /* Padding interno */
     border-radius: 20px;              /* Bordes redondeados */
@@ -404,7 +404,7 @@ body {
   border: 1px solid var(--color-input-border) ;
   border-radius: 5px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   background-color: var(--color-secondary);
 }
 
